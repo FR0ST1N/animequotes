@@ -1,0 +1,24 @@
+{
+  "name": "animequotes",
+  "version": "1.0.0",
+  "description": "Anime Quotes for Node.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FR0ST1N/animequotes.git"
+  },
+  "keywords": [
+    "anime",
+    "quotes"
+  ],
+  "author": "Frostin <iamfrostin@gmail.com> (https://fr0st1n.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FR0ST1N/animequotes/issues",
+    "email": "iamfrostin@gmail.com"
+  },
+  "homepage": "https://github.com/FR0ST1N/animequotes"
+}
