@@ -20,5 +20,8 @@
     "url": "https://github.com/FR0ST1N/animequotes/issues",
     "email": "iamfrostin@gmail.com"
   },
-  "homepage": "https://github.com/FR0ST1N/animequotes"
+  "homepage": "https://github.com/FR0ST1N/animequotes",
+  "devDependencies": {
+    "standard": "^14.3.1"
+  }
 }
