@@ -8,8 +8,16 @@ function randomIntFromInterval (min, max) {
 
 function searchData (inputKey, inputVal) {
   const result = []
+  const isStringVal = typeof inputVal === 'string'
+  if (isStringVal) {
+    inputVal = inputVal.toLowerCase()
+  }
   for (let i = 0; i < quotes.length; i++) {
-    if (quotes[i][inputKey] === inputVal) {
+    let currentResult = quotes[i][inputKey]
+    if (isStringVal) {
+      currentResult = currentResult.toLowerCase()
+    }
+    if (currentResult === inputVal) {
       result.push(quotes[i])
     }
   }
