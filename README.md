@@ -1,43 +1,43 @@
 # animequotes
 
-![npm](https://img.shields.io/npm/v/animequotes.svg) ![license](https://img.shields.io/npm/l/animequotes.svg) ![github-issues](https://img.shields.io/github/issues/FR0ST1N/animequotes.svg)
+![npm](https://img.shields.io/npm/v/animequotes?style=flat-square) ![npm](https://img.shields.io/npm/dt/animequotes?style=flat-square) ![NPM](https://img.shields.io/npm/l/animequotes?style=flat-square) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](https://standardjs.com)
 
 Anime Quotes for Node.
-
-![nodei.co](https://nodei.co/npm/animequotes.png?downloads=true&downloadRank=true&stars=true)
 
 
 ## Install
 
-`npm install --save animequotes`
+`npm install animequotes`
 
 
 ## Usage
 
- ```javascript
-const animeQuotes = require("animequotes");
+```javascript
+const animeQuotes = require('animequotes')
 
 // Get Random Quote
-console.log(animeQuotes.randomQuote());
+console.log(animeQuotes.randomQuote())
 
 // Get Quote by ID
-console.log(animeQuotes.getQuote(1));
+console.log(animeQuotes.getQuote(1))
 
 // Get Quotes by Anime
-console.log(animeQuotes.getQuotesByAnime("Naruto"));
+console.log(animeQuotes.getQuotesByAnime('Naruto'))
 
 // Get Quotes by Character
-console.log(animeQuotes.getQuotesByCharacter("Itachi Uchiha"));
+console.log(animeQuotes.getQuotesByCharacter('Itachi Uchiha'))
 ```
 
 
 ## Example Object
 
 ```json
-{ "quote": "Symmetry is what makes the world beautiful.",
-  "anime": "Soul Eater",
-  "id": 2799,
-  "name": "Death the Kid" }
+{
+  "quote": 'You are weak. Why are you so weak? Because you lack... hatred.',
+  "anime": 'Naruto',
+  "id": 635,
+  "name": 'Itachi Uchiha'
+}
 ```
 
 
@@ -46,6 +46,11 @@ console.log(animeQuotes.getQuotesByCharacter("Itachi Uchiha"));
 * Total Quotes: 8510
 * No. of unique Characters: 2334
 * No. of unique anime: 787
+
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md).
 
 
 ## License
