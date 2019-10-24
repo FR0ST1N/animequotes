@@ -4,7 +4,7 @@
   "description": "Anime Quotes for Node.",
   "main": "index.js",
   "scripts": {
-    "test": "standard index.js"
+    "test": "standard index.js --fix"
   },
   "repository": {
     "type": "git",

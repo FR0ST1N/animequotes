@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Private functions are prepended with `_`.
 - `_searchData (inputKey, inputVal)` now does case insensitive search.
+- Performance improvement for `getQuote (id)`.
 
 ## [1.0.0] - 2018-02-25
 ### Added

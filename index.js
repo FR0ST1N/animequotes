@@ -2,6 +2,9 @@
 
 const quotes = require('./quotes')
 
+const quotesLen = quotes.length
+const defaultError = { Error: 'No matches were found' }
+
 function _randomIntFromInterval (min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
@@ -24,16 +27,20 @@ function _searchData (inputKey, inputVal) {
   if (result.length > 0) {
     return result
   } else {
-    return { Error: 'No matches were found' }
+    return defaultError
   }
 }
 
 function randomQuote () {
-  return quotes[_randomIntFromInterval(1, quotes.length)]
+  return quotes[_randomIntFromInterval(1, quotesLen)]
 }
 
 function getQuote (id) {
-  return _searchData('id', id)
+  if (id > 0 && id <= quotesLen) {
+    return quotes[quotesLen - id]
+  } else {
+    return defaultError
+  }
 }
 
 function getQuotesByAnime (anime) {
