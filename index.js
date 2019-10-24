@@ -2,11 +2,11 @@
 
 const quotes = require('./quotes')
 
-function randomIntFromInterval (min, max) {
+function _randomIntFromInterval (min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-function searchData (inputKey, inputVal) {
+function _searchData (inputKey, inputVal) {
   const result = []
   const isStringVal = typeof inputVal === 'string'
   if (isStringVal) {
@@ -29,19 +29,19 @@ function searchData (inputKey, inputVal) {
 }
 
 function randomQuote () {
-  return quotes[randomIntFromInterval(1, quotes.length)]
+  return quotes[_randomIntFromInterval(1, quotes.length)]
 }
 
 function getQuote (id) {
-  return searchData('id', id)
+  return _searchData('id', id)
 }
 
 function getQuotesByAnime (anime) {
-  return searchData('anime', anime)
+  return _searchData('anime', anime)
 }
 
 function getQuotesByCharacter (character) {
-  return searchData('name', character)
+  return _searchData('name', character)
 }
 
 module.exports = {
