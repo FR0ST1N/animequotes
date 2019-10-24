@@ -1,6 +1,6 @@
 {
   "name": "animequotes",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Anime Quotes for Node.",
   "main": "index.js",
   "scripts": {
