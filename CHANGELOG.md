@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Standard added to `npm test`.
 
 ### Changed
+- Private functions are prepended with `_`.
 - `_searchData()` now does case insensitive search.
 
 ## [1.0.0] - 2018-02-25

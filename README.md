@@ -33,10 +33,10 @@ console.log(animeQuotes.getQuotesByCharacter('Itachi Uchiha'))
 
 ```json
 {
-  "quote": 'You are weak. Why are you so weak? Because you lack... hatred.',
-  "anime": 'Naruto',
+  "quote": "You are weak. Why are you so weak? Because you lack... hatred.",
+  "anime": "Naruto",
   "id": 635,
-  "name": 'Itachi Uchiha'
+  "name": "Itachi Uchiha"
 }
 ```
 
