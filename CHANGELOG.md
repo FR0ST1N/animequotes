@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.1] - 2020-03-14
+### Security
+- [Bumped acorn from 7.1.0 to 7.1.1](https://github.com/advisories/GHSA-7fhm-mqm4-2wp7).
+
 ## [1.1.0] - 2019-10-24
 ### Added
 - Code linting with [standard](https://standardjs.com/index.html).
@@ -22,5 +26,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release with 8510 quotes.
 
 [unreleased]: https://github.com/FR0ST1N/animequotes/compare/master...develop
+[1.1.1]: https://github.com/FR0ST1N/animequotes/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/FR0ST1N/animequotes/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/FR0ST1N/animequotes/releases/tag/v1.0.0
