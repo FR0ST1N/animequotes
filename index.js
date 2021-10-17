@@ -3,7 +3,23 @@
 const quotes = require('./quotes')
 
 const quotesLen = quotes.length
-const defaultError = { Error: 'No matches were found' }
+
+function _getEmptyObject () {
+  return {
+    quote: '',
+    anime: '',
+    id: '',
+    name: '',
+    success: false
+  }
+}
+
+function _createQuoteObject (quote) {
+  let quoteObject = _getEmptyObject()
+  quoteObject = quote
+  quoteObject.success = true
+  return quoteObject
+}
 
 function _randomIntFromInterval (min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
@@ -21,21 +37,17 @@ function _searchData (inputKey, inputVal) {
       currentResult = currentResult.toLowerCase()
     }
     if (currentResult === inputVal) {
-      result.push(quotes[i])
+      result.push(_createQuoteObject(quotes[i]))
     }
   }
-  if (result.length > 0) {
-    return result
-  } else {
-    return defaultError
-  }
+  return result
 }
 
 /**
  * Get random quote.
  */
 function randomQuote () {
-  return quotes[_randomIntFromInterval(1, quotesLen)]
+  return _createQuoteObject(quotes[_randomIntFromInterval(1, quotesLen)])
 }
 
 /**
@@ -43,11 +55,11 @@ function randomQuote () {
  * @param {number} id
  */
 function getQuote (id) {
+  let quote = _getEmptyObject()
   if (id > 0 && id <= quotesLen) {
-    return quotes[quotesLen - id]
-  } else {
-    return defaultError
+    quote = _createQuoteObject(quotes[quotesLen - id])
   }
+  return quote
 }
 
 /**
