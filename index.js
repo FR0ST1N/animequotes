@@ -47,7 +47,7 @@ function _searchData (inputKey, inputVal) {
  * Get random quote.
  */
 function randomQuote () {
-  return _createQuoteObject(quotes[_randomIntFromInterval(1, quotesLen)])
+  return _createQuoteObject(quotes[_randomIntFromInterval(0, quotesLen - 1)])
 }
 
 /**
