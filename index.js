@@ -32,15 +32,15 @@ function _searchData (inputKey, inputVal) {
 }
 
 /**
- * Get random quote 
+ * Get random quote.
  */
 function randomQuote () {
   return quotes[_randomIntFromInterval(1, quotesLen)]
 }
 
 /**
- * Get Quote by ID
- * @param {number} id 
+ * Get Quote by ID.
+ * @param {number} id
  */
 function getQuote (id) {
   if (id > 0 && id <= quotesLen) {
@@ -51,16 +51,16 @@ function getQuote (id) {
 }
 
 /**
- * Get quotes by Anime
- * @param {string} anime 
+ * Get quotes by Anime.
+ * @param {string} anime
  */
 function getQuotesByAnime (anime) {
   return _searchData('anime', anime)
 }
 
 /**
- * Get quotes by Character 
- * @param {string} character 
+ * Get quotes by Character.
+ * @param {string} character
  */
 function getQuotesByCharacter (character) {
   return _searchData('name', character)
