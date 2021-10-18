@@ -25,7 +25,7 @@ function _randomIntFromInterval (min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-function _searchData (inputKey, inputVal) {
+function _searchData (inputKey, inputVal, substringSearch) {
   const result = []
   const isStringVal = typeof inputVal === 'string'
   if (isStringVal) {
@@ -36,7 +36,8 @@ function _searchData (inputKey, inputVal) {
     if (isStringVal) {
       currentResult = currentResult.toLowerCase()
     }
-    if (currentResult === inputVal) {
+    if ((substringSearch === false && currentResult === inputVal) ||
+    (substringSearch === true && currentResult.includes(inputVal))) {
       result.push(_createQuoteObject(quotes[i]))
     }
   }
@@ -59,13 +60,13 @@ function randomQuote () {
   return _getRandomQuote(quotes)
 }
 
-function getRandomQuoteByAnime (anime) {
-  const result = getQuotesByAnime(anime)
+function getRandomQuoteByAnime (anime, substringSearch = false) {
+  const result = getQuotesByAnime(anime, substringSearch)
   return _getRandomQuote(result)
 }
 
-function getRandomQuoteByCharacter (character) {
-  const result = getQuotesByCharacter(character)
+function getRandomQuoteByCharacter (character, substringSearch = false) {
+  const result = getQuotesByCharacter(character, substringSearch)
   return _getRandomQuote(result)
 }
 
@@ -85,16 +86,16 @@ function getQuote (id) {
  * Get quotes by Anime.
  * @param {string} anime
  */
-function getQuotesByAnime (anime) {
-  return _searchData('anime', anime)
+function getQuotesByAnime (anime, substringSearch = false) {
+  return _searchData('anime', anime, substringSearch)
 }
 
 /**
  * Get quotes by Character.
  * @param {string} character
  */
-function getQuotesByCharacter (character) {
-  return _searchData('name', character)
+function getQuotesByCharacter (character, substringSearch = false) {
+  return _searchData('name', character, substringSearch)
 }
 
 module.exports = {
