@@ -43,11 +43,30 @@ function _searchData (inputKey, inputVal) {
   return result
 }
 
+function _getRandomQuote (quotesArray) {
+  let quote = _getEmptyObject()
+  const len = quotesArray.length
+  if (len > 0) {
+    quote = _createQuoteObject(quotesArray[_randomIntFromInterval(0, len - 1)])
+  }
+  return quote
+}
+
 /**
  * Get random quote.
  */
 function randomQuote () {
-  return _createQuoteObject(quotes[_randomIntFromInterval(0, quotesLen - 1)])
+  return _getRandomQuote(quotes)
+}
+
+function getRandomQuoteByAnime (anime) {
+  const result = getQuotesByAnime(anime)
+  return _getRandomQuote(result)
+}
+
+function getRandomQuoteByCharacter (character) {
+  const result = getQuotesByCharacter(character)
+  return _getRandomQuote(result)
 }
 
 /**
@@ -82,5 +101,7 @@ module.exports = {
   randomQuote: randomQuote,
   getQuote: getQuote,
   getQuotesByAnime: getQuotesByAnime,
-  getQuotesByCharacter: getQuotesByCharacter
+  getQuotesByCharacter: getQuotesByCharacter,
+  getRandomQuoteByAnime: getRandomQuoteByAnime,
+  getRandomQuoteByCharacter: getRandomQuoteByCharacter
 }
