@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [2.0.0] - 2021-10-19
 ### Added
 - Typescript types support by [@aghontpi](https://github.com/aghontpi).
 - JSDoc comments for code.
@@ -39,6 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release with 8510 quotes.
 
 [unreleased]: https://github.com/FR0ST1N/animequotes/compare/master...develop
+[2.0.0]: https://github.com/FR0ST1N/animequotes/compare/v1.1.2...v2.0.0
 [1.1.2]: https://github.com/FR0ST1N/animequotes/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/FR0ST1N/animequotes/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/FR0ST1N/animequotes/compare/v1.0.0...v1.1.0
