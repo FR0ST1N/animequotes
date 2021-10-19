@@ -1,0 +1,11 @@
+{
+  "include": ["index.js"],
+  "exclude": ["quotes.js"],
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./",
+    "lib": ["es7"]
+  }
+}
