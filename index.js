@@ -60,7 +60,7 @@ function _randomIntFromInterval (min, max) {
 function _searchData (inputKey, inputVal, substringSearch) {
   const result = []
   inputVal = inputVal.toLowerCase()
-  for (let i = 0; i < quotes.length; i++) {
+  for (let i = 0; i < quotesLen; i++) {
     const currentResult = quotes[i][inputKey].toLowerCase()
     if ((substringSearch === false && currentResult === inputVal) ||
     (substringSearch === true && currentResult.includes(inputVal))) {
